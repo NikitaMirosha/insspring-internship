@@ -1,11 +1,7 @@
 package com.insspring.nikita_internship
 
 import android.content.Intent
-import android.graphics.Typeface
 import android.os.Bundle
-import android.text.SpannableString
-import android.text.Spanned
-import android.text.style.StyleSpan
 import androidx.core.content.ContextCompat
 import com.insspring.nikita_internship.R.*
 import kotlinx.android.synthetic.main.activity_main.*
@@ -40,13 +36,11 @@ class MainActivity : MvpAppCompatActivity(), ProductView {
     }
 
     override fun updateProduct(product: ProductModel) {
-        val spannableBestSeller = SpannableString(product.bestSeller ?: "")
-        spannableBestSeller.setSpan(StyleSpan(Typeface.BOLD), 0, 12, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
-
         vTvProductName.text = product.productName ?: ""
         vTvProductInfo.text = product.productInfo ?: ""
-        vTvBestSeller.text = spannableBestSeller
-        vTvPrice.text = product.price ?: ""
+        vTvBestSellerName.text = product.bestSeller ?: ""
+        vTvRateMark.text = product.rateMark.toString()
+        vTvPrice.text = product.price.toString()
     }
 
     override fun updateImages() {

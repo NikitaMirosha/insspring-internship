@@ -24,12 +24,10 @@
     Each type belongs to the citrus family of fruits and grows on trees.
     </string>
 
-    <string name="bs">Best Seller: Sweet Products Ltd.</string>
-
     <string name="best_seller">Best Seller:</string>
-    <string name="sweet_products">Sweet Products Ltd.</string>
-    <string name="price">$10.55</string>
+    <string name="dollar">$</string>
+    <string name="price">10.55</string>
     <string name="per_kg">Per kg</string>
-    <string name="number">4.8</string>
+    <string name="rate_mark">4.8</string>
     <string name="add_to_bag">Add To Bag</string>
 </resources>
