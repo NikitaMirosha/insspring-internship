@@ -9,10 +9,9 @@ import orangeapplication.main.view.ProductView
 class ProductPresenter : MvpPresenter<ProductView>() {
 
     private val repo = ProductRepo()
+    private val model = repo.getProduct()
 
     init {
-        val model = repo.getProduct()
-
         viewState.updateImages()
         viewState.updateProduct(model)
     }
