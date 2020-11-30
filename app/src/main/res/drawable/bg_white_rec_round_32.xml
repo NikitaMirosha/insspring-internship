@@ -3,12 +3,12 @@
 
     <item
         android:state_pressed="true"
-        android:drawable="@drawable/ic_rate_btn_pressed">
+        android:drawable="@drawable/bg_white_rec_round_32_pressed">
 
     </item>
 
     <item
-        android:drawable="@drawable/ic_rate_btn_default">
+        android:drawable="@drawable/bg_white_rec_round_32_default">
 
     </item>
 

@@ -6,8 +6,6 @@ import android.os.Bundle
 import android.text.SpannableString
 import android.text.Spanned
 import android.text.style.StyleSpan
-import android.util.Log
-import android.widget.ImageView
 import androidx.core.content.ContextCompat
 import com.insspring.nikita_internship.R.*
 import kotlinx.android.synthetic.main.activity_main.*
@@ -31,7 +29,7 @@ class MainActivity : MvpAppCompatActivity(), ProductView {
     }
 
     private fun initListener() {
-        vIvBackArrow.setOnClickListener {
+        vLnBack.setOnClickListener {
             openBackActivity()
         }
     }
@@ -52,7 +50,7 @@ class MainActivity : MvpAppCompatActivity(), ProductView {
     }
 
     override fun updateImages() {
-        vIvBackArrow.setImageDrawable(ContextCompat.getDrawable(this, drawable.ic_arrow))
+        vIvBackArrow.setImageDrawable(ContextCompat.getDrawable(this, drawable.ic_back_arrow))
         vIvHeart.setImageDrawable(ContextCompat.getDrawable(this, drawable.ic_heart))
         vIvBag.setImageDrawable(ContextCompat.getDrawable(this, drawable.ic_bag))
         vIvUserOne.setImageDrawable(ContextCompat.getDrawable(this, drawable.ic_user))
