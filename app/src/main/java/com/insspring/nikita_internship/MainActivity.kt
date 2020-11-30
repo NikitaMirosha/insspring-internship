@@ -20,7 +20,7 @@ import presenter.ProductPresenter
 
 class MainActivity : MvpAppCompatActivity(), ProductView {
 
-    @InjectPresenter // аннотация для получения экземпляра Presenter
+    @InjectPresenter
     lateinit var productPresenter: ProductPresenter
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,19 +28,17 @@ class MainActivity : MvpAppCompatActivity(), ProductView {
         setContentView(layout.activity_main)
 
         initListener()
-
     }
 
     private fun initListener() {
-        val backBtn = findViewById<ImageView>(id.vIvBackArrow)
-        backBtn.setOnClickListener { openBackActivity() }
-
+        vIvBackArrow.setOnClickListener {
+            openBackActivity()
+        }
     }
 
     private fun openBackActivity() {
         val intent = Intent(this, BackActivity::class.java)
         startActivity(intent)
-
     }
 
     override fun updateProduct(product: ProductModel) {
@@ -51,12 +49,9 @@ class MainActivity : MvpAppCompatActivity(), ProductView {
         vTvProductInfo.text = product.productInfo ?: ""
         vTvBestSeller.text = spannableBestSeller
         vTvPrice.text = product.price ?: ""
-
-        val tagModel = "Product Model: "
-        Log.d(tagModel, product.toString())
     }
 
-    override fun updateImage() {
+    override fun updateImages() {
         vIvBackArrow.setImageDrawable(ContextCompat.getDrawable(this, drawable.ic_arrow))
         vIvHeart.setImageDrawable(ContextCompat.getDrawable(this, drawable.ic_heart))
         vIvBag.setImageDrawable(ContextCompat.getDrawable(this, drawable.ic_bag))
@@ -64,7 +59,6 @@ class MainActivity : MvpAppCompatActivity(), ProductView {
         vIvUserTwo.setImageDrawable(ContextCompat.getDrawable(this, drawable.ic_user))
         vIvUserThree.setImageDrawable(ContextCompat.getDrawable(this, drawable.ic_user))
         vIvStar.setImageDrawable(ContextCompat.getDrawable(this, drawable.ic_star))
-
     }
 
 }

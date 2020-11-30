@@ -5,7 +5,7 @@ import moxy.MvpPresenter
 import orangeapplication.main.repository.ProductRepo
 import orangeapplication.main.view.ProductView
 
-@InjectViewState  // аннотация для привязывания ViewState к Presenter
+@InjectViewState
 class ProductPresenter : MvpPresenter<ProductView>() {
 
     private val repo = ProductRepo()
@@ -13,7 +13,7 @@ class ProductPresenter : MvpPresenter<ProductView>() {
     init {
         val model = repo.getProduct()
 
-        viewState.updateImage()
+        viewState.updateImages()
         viewState.updateProduct(model)
     }
 }

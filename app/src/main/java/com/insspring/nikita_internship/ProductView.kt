@@ -10,5 +10,5 @@ interface ProductView : MvpView {
     fun updateProduct(product: ProductModel)
 
     @StateStrategyType(AddToEndSingleStrategy::class)
-    fun updateImage()
+    fun updateImages()
 }
