@@ -5,10 +5,10 @@ import android.os.Bundle
 import androidx.core.content.ContextCompat
 import com.insspring.nikita_internship.R.*
 import kotlinx.android.synthetic.main.activity_main.*
-import orangeapplication.main.model.ProductModel
 import moxy.MvpAppCompatActivity
 import moxy.presenter.InjectPresenter
 import orangeapplication.main.back.BackActivity
+import orangeapplication.main.model.ProductModel
 import orangeapplication.main.view.ProductView
 import presenter.ProductPresenter
 
@@ -36,11 +36,11 @@ class MainActivity : MvpAppCompatActivity(), ProductView {
     }
 
     override fun updateProduct(product: ProductModel) {
-        vTvProductName.text = product.productName ?: ""
+        vTvProductName.text = getString(string.about_orange, product.productName)
         vTvProductInfo.text = product.productInfo ?: ""
-        vTvBestSellerName.text = product.bestSeller ?: ""
-        vTvRateMark.text = product.rateMark.toString()
-        vTvPrice.text = product.price.toString()
+        vTvRateMark.text = getString(string.rate_mark, product.rateMark)
+        vTvBestSeller.text = getString(string.best_seller, product.bestSeller)
+        vTvPrice.text = getString(string.price, product.price)
     }
 
     override fun updateImages() {

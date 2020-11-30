@@ -3,22 +3,17 @@
 
     <item>
 
-        <shape
-            android:shape="rectangle">
+        <shape android:shape="rectangle">
 
-            <solid
-                android:color="#EDEDED">
+            <solid android:color="#EDEDED">
 
             </solid>
 
-            <corners
-                android:radius="32dp">
+            <corners android:radius="32dp">
 
             </corners>
 
-            <size
-                android:width="104dp"
-                android:height="42dp">
+            <size android:width="104dp" android:height="42dp">
 
             </size>
 

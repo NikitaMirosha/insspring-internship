@@ -1,33 +1,9 @@
 <resources>
     <string name="app_name">Fruit Shop</string>
-    <string name="about_orange">About Orange</string>
-    <string name="main_text">Oranges are tropical fruits that are actually some of the worlds
-    most popular. There are different types of oranges, ranging from sweet to bitter.
-    Each type belongs to the citrus family of fruits and grows on trees.
-        Oranges are tropical fruits that are actually some of the worlds
-    most popular. There are different types of oranges, ranging from sweet to bitter.
-    Each type belongs to the citrus family of fruits and grows on trees.
-        Oranges are tropical fruits that are actually some of the worlds
-    most popular. There are different types of oranges, ranging from sweet to bitter.
-    Each type belongs to the citrus family of fruits and grows on trees.
-        Oranges are tropical fruits that are actually some of the worlds
-    most popular. There are different types of oranges, ranging from sweet to bitter.
-    Each type belongs to the citrus family of fruits and grows on trees.
-        Oranges are tropical fruits that are actually some of the worlds
-    most popular. There are different types of oranges, ranging from sweet to bitter.
-    Each type belongs to the citrus family of fruits and grows on trees.
-        Oranges are tropical fruits that are actually some of the worlds
-    most popular. There are different types of oranges, ranging from sweet to bitter.
-    Each type belongs to the citrus family of fruits and grows on trees.
-        Oranges are tropical fruits that are actually some of the worlds
-    most popular. There are different types of oranges, ranging from sweet to bitter.
-    Each type belongs to the citrus family of fruits and grows on trees.
-    </string>
-
-    <string name="best_seller">Best Seller:</string>
-    <string name="dollar">$</string>
-    <string name="price">10.55</string>
+    <string name="about_orange">About %s</string>
+    <string name="best_seller">Best Seller: %s</string>
+    <string name="price">$%s</string>
     <string name="per_kg">Per kg</string>
-    <string name="rate_mark">4.8</string>
+    <string name="rate_mark">%s</string>
     <string name="add_to_bag">Add To Bag</string>
 </resources>

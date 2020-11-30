@@ -170,11 +170,10 @@
                 android:layout_height="wrap_content"
                 android:background="@color/colorWhite"
                 android:lineSpacingExtra="@dimen/sp_6"
-                android:paddingTop="@dimen/dp_8"
-                android:paddingBottom="@dimen/dp_8"
-                android:paddingEnd="@dimen/dp_16"
                 android:paddingStart="@dimen/dp_16"
-                android:text="@string/main_text" />
+                android:paddingTop="@dimen/dp_8"
+                android:paddingEnd="@dimen/dp_16"
+                android:paddingBottom="@dimen/dp_8" />
 
         </LinearLayout>
 
@@ -187,29 +186,14 @@
         android:background="@color/colorWhite"
         android:orientation="vertical">
 
-        <LinearLayout
+        <TextView
+            android:id="@+id/vTvBestSeller"
+            style="@style/TextView.BestSeller"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dp_16"
             android:layout_marginTop="@dimen/dp_8"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/vTvBestSeller"
-                style="@style/TextView.BestSeller"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/best_seller" />
-
-            <TextView
-                android:id="@+id/vTvBestSellerName"
-                style="@style/TextView.BestSellerName"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingStart="@dimen/dp_8"
-                tools:ignore="RtlSymmetry" />
-
-        </LinearLayout>
+            android:text="@string/best_seller" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -222,27 +206,13 @@
                 android:layout_margin="@dimen/dp_16"
                 android:orientation="vertical">
 
-                <LinearLayout
+                <TextView
+                    android:id="@+id/vTvPrice"
+                    style="@style/TextView.Price"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/dp_4"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/vTvDollar"
-                        style="@style/TextView.Price"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/dollar" />
-
-                    <TextView
-                        android:id="@+id/vTvPrice"
-                        style="@style/TextView.Price"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        tools:text="@string/price" />
-
-                </LinearLayout>
+                    android:text="@string/price" />
 
                 <TextView
                     android:id="@+id/vTvPerKg"
