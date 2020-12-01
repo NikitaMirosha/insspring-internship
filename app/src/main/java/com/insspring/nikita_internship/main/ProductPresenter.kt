@@ -1,9 +1,8 @@
-package presenter
+package com.insspring.nikita_internship.main
 
 import moxy.InjectViewState
 import moxy.MvpPresenter
-import orangeapplication.main.repository.ProductRepo
-import orangeapplication.main.view.ProductView
+import com.insspring.nikita_internship.repository.ProductRepo
 
 @InjectViewState
 class ProductPresenter : MvpPresenter<ProductView>() {

@@ -1,4 +1,4 @@
-package orangeapplication.main.model
+package com.insspring.nikita_internship.model
 
 import java.math.BigDecimal
 

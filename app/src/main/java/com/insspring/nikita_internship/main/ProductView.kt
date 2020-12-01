@@ -1,6 +1,6 @@
-package orangeapplication.main.view
+package com.insspring.nikita_internship.main
 
-import orangeapplication.main.model.ProductModel
+import com.insspring.nikita_internship.model.ProductModel
 import moxy.MvpView
 import moxy.viewstate.strategy.AddToEndSingleStrategy
 import moxy.viewstate.strategy.StateStrategyType

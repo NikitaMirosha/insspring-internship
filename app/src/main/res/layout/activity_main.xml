@@ -36,7 +36,7 @@
                 android:orientation="horizontal">
 
                 <LinearLayout
-                    android:id="@+id/vLnBack"
+                    android:id="@+id/vLlBack"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/bg_white_rec_round_14"
@@ -48,7 +48,7 @@
                         android:layout_height="wrap_content"
                         android:paddingEnd="@dimen/dp_2"
                         tools:ignore="RtlSymmetry"
-                        tools:src="@drawable/ic_back_arrow" />
+                        tools:src="@drawable/ic_arrow" />
 
                 </LinearLayout>
 
@@ -230,6 +230,7 @@
                 android:layout_weight="1" />
 
             <LinearLayout
+                android:id="@+id/vLlAddToBag"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/dp_16"
@@ -243,7 +244,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:padding="@dimen/dp_18"
-                    android:text="@string/add_to_bag" />
+                    android:text="@string/add_to_bag"/>
 
                 <ImageView
                     android:id="@+id/vIvBag"

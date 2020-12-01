@@ -1,6 +1,6 @@
-package orangeapplication.main.repository
+package com.insspring.nikita_internship.repository
 
-import orangeapplication.main.model.ProductModel
+import com.insspring.nikita_internship.model.ProductModel
 import java.math.BigDecimal
 
 class ProductRepo {
