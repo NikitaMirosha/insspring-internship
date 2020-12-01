@@ -24,7 +24,7 @@ class ProductActivity : MvpAppCompatActivity(), ProductView {
     }
 
     private fun initListeners() {
-        vLlBack.setOnClickListener {
+        vLlUserProfile.setOnClickListener {
             openBackActivity()
         }
 
@@ -52,7 +52,7 @@ class ProductActivity : MvpAppCompatActivity(), ProductView {
     }
 
     override fun updateImages() {
-        Glide.with(this).load(drawable.ic_arrow).placeholder(drawable.ic_arrow).into(vIvBackArrow)
+        Glide.with(this).load(drawable.ic_arrow).placeholder(drawable.ic_arrow).into(vIvUserProfile)
         Glide.with(this).load(drawable.ic_heart).placeholder(drawable.ic_heart).into(vIvHeart)
         Glide.with(this).load(drawable.ic_bag).placeholder(drawable.ic_bag).into(vIvBag)
         Glide.with(this).load(drawable.ic_user).placeholder(drawable.ic_user).into(vIvUserOne)

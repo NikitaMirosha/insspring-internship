@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/bg_white_oval_50_round_14_pressed" android:state_pressed="true">
+
+    </item>
+
+    <item android:drawable="@drawable/bg_white_oval_50_round_14_default">
+
+    </item>
+
+</selector>

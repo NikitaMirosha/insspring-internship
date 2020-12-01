@@ -36,14 +36,14 @@
                 android:orientation="horizontal">
 
                 <LinearLayout
-                    android:id="@+id/vLlBack"
+                    android:id="@+id/vLlUserProfile"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/bg_white_rec_round_14"
+                    android:background="@drawable/bg_white_rec_48_round_14"
                     android:gravity="center">
 
                     <ImageView
-                        android:id="@+id/vIvBackArrow"
+                        android:id="@+id/vIvUserProfile"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingEnd="@dimen/dp_2"
@@ -60,7 +60,7 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/bg_white_oval_round_14"
+                    android:background="@drawable/bg_white_oval_50_round_14"
                     android:gravity="center">
 
                     <ImageView
