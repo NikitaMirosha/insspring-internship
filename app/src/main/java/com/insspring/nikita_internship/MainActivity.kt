@@ -1,8 +1,10 @@
 package com.insspring.nikita_internship
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.core.content.ContextCompat
+import com.bumptech.glide.Glide
 import com.insspring.nikita_internship.R.*
 import kotlinx.android.synthetic.main.activity_main.*
 import moxy.MvpAppCompatActivity
@@ -44,13 +46,13 @@ class MainActivity : MvpAppCompatActivity(), ProductView {
     }
 
     override fun updateImages() {
-        vIvBackArrow.setImageDrawable(ContextCompat.getDrawable(this, drawable.ic_back_arrow))
-        vIvHeart.setImageDrawable(ContextCompat.getDrawable(this, drawable.ic_heart))
-        vIvBag.setImageDrawable(ContextCompat.getDrawable(this, drawable.ic_bag))
-        vIvUserOne.setImageDrawable(ContextCompat.getDrawable(this, drawable.ic_user))
-        vIvUserTwo.setImageDrawable(ContextCompat.getDrawable(this, drawable.ic_user))
-        vIvUserThree.setImageDrawable(ContextCompat.getDrawable(this, drawable.ic_user))
-        vIvStar.setImageDrawable(ContextCompat.getDrawable(this, drawable.ic_star))
+        Glide.with(this).load(drawable.ic_back_arrow).placeholder(drawable.ic_back_arrow).into(vIvBackArrow)
+        Glide.with(this).load(drawable.ic_heart).placeholder(drawable.ic_heart).into(vIvHeart)
+        Glide.with(this).load(drawable.ic_bag).placeholder(drawable.ic_bag).into(vIvBag)
+        Glide.with(this).load(drawable.ic_user).placeholder(drawable.ic_user).into(vIvUserOne)
+        Glide.with(this).load(drawable.ic_user).placeholder(drawable.ic_user).into(vIvUserTwo)
+        Glide.with(this).load(drawable.ic_user).placeholder(drawable.ic_user).into(vIvUserThree)
+        Glide.with(this).load(drawable.ic_star).placeholder(drawable.ic_star).into(vIvStar)
     }
 
 }
