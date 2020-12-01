@@ -1,4 +1,4 @@
-package com.insspring.nikita_internship.main
+package com.insspring.nikita_internship.product
 
 import com.insspring.nikita_internship.model.ProductModel
 import moxy.MvpView

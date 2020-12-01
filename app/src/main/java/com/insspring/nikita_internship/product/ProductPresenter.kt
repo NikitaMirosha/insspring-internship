@@ -1,4 +1,4 @@
-package com.insspring.nikita_internship.main
+package com.insspring.nikita_internship.product
 
 import moxy.InjectViewState
 import moxy.MvpPresenter

@@ -1,42 +1,40 @@
-package com.insspring.nikita_internship.main
+package com.insspring.nikita_internship.product
 
 import android.content.Intent
 import android.os.Bundle
 import com.bumptech.glide.Glide
 import com.insspring.nikita_internship.addtobag.AddToBagActivity
 import com.insspring.nikita_internship.R.*
-import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_product.*
 import moxy.MvpAppCompatActivity
 import moxy.presenter.InjectPresenter
-import com.insspring.nikita_internship.back.BackActivity
+import com.insspring.nikita_internship.productlist.ProductListActivity
 import com.insspring.nikita_internship.model.ProductModel
 
-class MainActivity : MvpAppCompatActivity(), ProductView {
+class ProductActivity : MvpAppCompatActivity(), ProductView {
 
     @InjectPresenter
     lateinit var productPresenter: ProductPresenter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(layout.activity_main)
+        setContentView(layout.activity_product)
 
-        initListener()
+        initListeners()
     }
 
-    private fun initListener() {
+    private fun initListeners() {
         vLlBack.setOnClickListener {
             openBackActivity()
         }
+
+        vLlAddToBag.setOnClickListener {
+            addToBagActivity()
+        }
     }
 
-//    private fun
-//
-//    vLlAddToBag.setOnClickListener {
-//        addToBagActivity()
-//    }
-
     private fun openBackActivity() {
-        val intent = Intent(this, BackActivity::class.java)
+        val intent = Intent(this, ProductListActivity::class.java)
         startActivity(intent)
     }
 

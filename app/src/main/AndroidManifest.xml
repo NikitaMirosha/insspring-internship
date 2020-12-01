@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
 
-        <activity android:name=".main.MainActivity">
+        <activity android:name=".product.ProductActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -18,10 +18,17 @@
         </activity>
 
         <activity
-            android:name=".back.BackActivity"
-            android:label="BackActivity">
+            android:name=".productlist.ProductListActivity">
             <intent-filter >
-                <action android:name="BackActivity" />
+                <action android:name="ProductListActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".addtobag.AddToBagActivity">
+            <intent-filter >
+                <action android:name="AddToBagActivity" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
