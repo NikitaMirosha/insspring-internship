@@ -75,8 +75,8 @@
                     android:layout_marginStart="@dimen/dp_8"
                     android:layout_marginEnd="@dimen/dp_8"
                     android:autofillHints="Search"
-                    android:textColor="@color/black"
                     android:inputType="text"
+                    android:textColor="@color/black"
                     tools:ignore="LabelFor">
 
                 </EditText>
@@ -101,19 +101,19 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dp_130"
         android:orientation="horizontal">
 
         <androidx.cardview.widget.CardView
             android:layout_width="@dimen/dp_160"
-            android:layout_height="@dimen/dp_240"
-            android:layout_gravity="bottom">
+            android:layout_height="@dimen/dp_210">
 
             <TextView
                 android:id="@+id/vTvCardTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
+                android:layout_gravity="center"
                 android:text="Loading..."
                 android:textSize="20sp" />
 
@@ -121,18 +121,41 @@
 
     </LinearLayout>
 
-    <LinearLayout
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:orientation="vertical">
+        android:layout_gravity="bottom">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_60"
+            android:layout_gravity="bottom"
+            android:background="@drawable/bg_white_rec_round_40_gray">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/dp_32"
+                tools:src="@drawable/ic_home_yellow" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/dp_82"
+                tools:src="@drawable/ic_search_gray" />
+
+        </FrameLayout>
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/dp_32"
             android:background="@drawable/bg_yellow_oval_50_round_14"
             android:gravity="center"
-            android:layout_gravity="center_horizontal">
+            tools:src="@drawable/ic_bag">
 
             <ImageView
                 android:id="@+id/vIvBagMainMenu"
@@ -142,12 +165,6 @@
 
         </LinearLayout>
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/dp_60"
-            android:layout_gravity="bottom"
-            android:src="@drawable/bg_white_rec_round_40_gray" />
-
-    </LinearLayout>
+    </FrameLayout>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
