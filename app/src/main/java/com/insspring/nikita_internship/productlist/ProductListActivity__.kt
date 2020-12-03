@@ -2,20 +2,17 @@ package com.insspring.nikita_internship.productlist
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.LinearSnapHelper
 import androidx.recyclerview.widget.SnapHelper
-import com.bumptech.glide.Glide
 import com.insspring.nikita_internship.R
-import kotlinx.android.synthetic.main.activity_product_cards.*
-import kotlinx.android.synthetic.main.activity_product_list.*
+import kotlinx.android.synthetic.main.activity_product_list__.*
 
-class ProductListActivity : AppCompatActivity() {
+class ProductListActivity__ : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_product_list)
+        setContentView(R.layout.activity_product_list__)
 
         //Glide.with(this).load(R.drawable.ic_user_profile).placeholder(R.drawable.ic_user_profile).into(vIvUserProfile)
         //Glide.with(this).load(R.drawable.ic_dots_menu).placeholder(R.drawable.ic_dots_menu).into(vIvDotsMenu)
@@ -27,7 +24,7 @@ class ProductListActivity : AppCompatActivity() {
         }
 
         vRvProductList.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
-        vRvProductList.adapter = ProductAdapter(posts)
+        vRvProductList.adapter = ProductAdapter__(posts)
 
         val snapHelper: SnapHelper = LinearSnapHelper()
         snapHelper.attachToRecyclerView(vRvProductList)

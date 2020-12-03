@@ -55,7 +55,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dp_24"
-                android:background="@drawable/bg_white_rec_round_12"
+                android:background="@drawable/bg_white_rec_round_16"
                 android:orientation="horizontal">
 
                 <ImageView

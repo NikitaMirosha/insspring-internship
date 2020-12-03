@@ -8,7 +8,6 @@ import com.insspring.nikita_internship.R.*
 import kotlinx.android.synthetic.main.activity_product.*
 import moxy.MvpAppCompatActivity
 import moxy.presenter.InjectPresenter
-import com.insspring.nikita_internship.productlist.ProductListActivity
 import com.insspring.nikita_internship.productlist.ProductsListActivity
 import com.insspring.nikita_internship.model.ProductModel
 

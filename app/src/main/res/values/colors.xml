@@ -20,6 +20,7 @@
     <color name="colorGray">#6A6A6A</color>
     <color name="colorOrange">#FFC40B</color>
     <color name="colorToolbarText">#000000</color>
+    <color name="colorProductCard">#FFF6D9</color>
     <color name="colorDarkSemiTransparent">#CCFFFFFF</color>
 
 </resources>

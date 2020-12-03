@@ -9,8 +9,12 @@ import androidx.appcompat.widget.SearchView
 import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.insspring.nikita_internship.R
 import com.insspring.nikita_internship.productlist.ProductsAdapter.SelectedProduct
+import kotlinx.android.synthetic.main.activity_product.*
+import kotlinx.android.synthetic.main.activity_product.vIvArrow
+import kotlinx.android.synthetic.main.activity_products_list.*
 
 class ProductsListActivity : AppCompatActivity(), SelectedProduct {
 
@@ -23,6 +27,9 @@ class ProductsListActivity : AppCompatActivity(), SelectedProduct {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_products_list)
+
+        Glide.with(this).load(R.drawable.ic_user_profile).placeholder(R.drawable.ic_user_profile).into(vIvUserProfile)
+        Glide.with(this).load(R.drawable.ic_dots_menu).placeholder(R.drawable.ic_dots_menu).into(vIvDotsMenu)
 
         vTbSearch = findViewById(R.id.vTbSearch)
         vRvProductsList = findViewById(R.id.vRvProductsList)

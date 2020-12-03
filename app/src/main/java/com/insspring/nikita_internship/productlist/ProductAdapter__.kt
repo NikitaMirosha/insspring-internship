@@ -6,10 +6,10 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.insspring.nikita_internship.R
-import kotlinx.android.synthetic.main.activity_product_cards.view.*
+import kotlinx.android.synthetic.main.activity_product_cards__.view.*
 
-class ProductAdapter(val posts: ArrayList<String>) :
-    RecyclerView.Adapter<ProductAdapter.PostsViewHolder>() {
+class ProductAdapter__(val posts: ArrayList<String>) :
+    RecyclerView.Adapter<ProductAdapter__.PostsViewHolder>() {
 
     override fun onBindViewHolder(holder: PostsViewHolder, position: Int) {
         holder.username.text = posts[position]
@@ -18,7 +18,7 @@ class ProductAdapter(val posts: ArrayList<String>) :
     override fun getItemCount() = posts.size
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PostsViewHolder {
-        val view: View = LayoutInflater.from(parent.context).inflate(R.layout.activity_product_cards, parent, false)
+        val view: View = LayoutInflater.from(parent.context).inflate(R.layout.activity_product_cards__, parent, false)
         return PostsViewHolder(view)
     }
 

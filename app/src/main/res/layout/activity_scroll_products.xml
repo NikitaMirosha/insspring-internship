@@ -2,16 +2,17 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:gravity="center"
     android:orientation="vertical"
-    android:background="@color/startColor">
+    android:background="@color/colorWhite">
 
     <LinearLayout
         android:layout_width="180dp"
-        android:layout_height="210dp"
+        android:layout_height="230dp"
         android:layout_margin="6dp"
         android:gravity="center"
-        android:background="@drawable/recyclerview_bg"
+        android:background="@drawable/bg_blue_rec_round_26"
         android:orientation="vertical"
         android:padding="30dp">
 
@@ -25,8 +26,8 @@
                 android:id="@+id/prefix"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                style="@style/TextView.Description"
                 android:text="P"
-                android:textColor="@color/headerColor"
                 android:textSize="16sp" />
 
         </LinearLayout>
@@ -37,8 +38,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_gravity="center"
+            style="@style/TextView.Description"
             android:text="name"
-            android:textColor="@color/headerColor"
             android:textSize="16sp" />
 
     </LinearLayout>

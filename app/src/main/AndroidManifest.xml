@@ -34,7 +34,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".productlist.ProductListActivity">
+        <activity android:name=".productlist.ProductListActivity__">
             <intent-filter>
                 <action android:name="ProductListActivity" />
 

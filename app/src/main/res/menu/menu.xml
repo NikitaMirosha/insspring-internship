@@ -4,8 +4,9 @@
 <item
   android:title="Search view"
     android:id="@+id/vSvSearch"
-    android:icon="@android:drawable/ic_menu_search"
+    android:icon="@drawable/ic_search_gray"
     app:showAsAction="always"
+    android:iconTint="@color/black"
     app:actionViewClass="androidx.appcompat.widget.SearchView"
     />
 </menu>
