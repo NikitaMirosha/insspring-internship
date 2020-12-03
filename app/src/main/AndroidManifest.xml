@@ -13,22 +13,39 @@
         <activity android:name=".product.ProductActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <activity
-            android:name=".productlist.ProductListActivity">
-            <intent-filter >
-                <action android:name="ProductListActivity" />
+        <activity android:name=".productlist.ProductsListActivity">
+            <intent-filter>
+                <action android:name="ProductsListActivity" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
 
-        <activity
-            android:name=".addtobag.AddToBagActivity">
-            <intent-filter >
+        <activity android:name=".productlist.SelectedProductActivity">
+            <intent-filter>
+                <action android:name="SelectedProductActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".productlist.ProductListActivity">
+            <intent-filter>
+                <action android:name="ProductListActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".addtobag.AddToBagActivity">
+            <intent-filter>
                 <action android:name="AddToBagActivity" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>

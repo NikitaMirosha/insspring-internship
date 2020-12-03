@@ -244,7 +244,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:padding="@dimen/dp_18"
-                    android:text="@string/add_to_bag"/>
+                    android:text="@string/add_to_bag" />
 
                 <ImageView
                     android:id="@+id/vIvBag"

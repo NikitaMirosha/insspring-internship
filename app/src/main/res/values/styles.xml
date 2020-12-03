@@ -8,6 +8,10 @@
         <item name="android:fontFamily">@font/ptsans</item>
     </style>
 
+    <style name="ToolBar">
+        <item name="android:editTextColor">@color/colorWhite</item>
+    </style>
+
     <style name="AppTheme.NoActionBar">
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
         <item name="android:statusBarColor">@android:color/transparent</item>

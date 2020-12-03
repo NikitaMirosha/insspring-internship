@@ -9,6 +9,7 @@ import kotlinx.android.synthetic.main.activity_product.*
 import moxy.MvpAppCompatActivity
 import moxy.presenter.InjectPresenter
 import com.insspring.nikita_internship.productlist.ProductListActivity
+import com.insspring.nikita_internship.productlist.ProductsListActivity
 import com.insspring.nikita_internship.model.ProductModel
 
 class ProductActivity : MvpAppCompatActivity(), ProductView {
@@ -34,7 +35,7 @@ class ProductActivity : MvpAppCompatActivity(), ProductView {
     }
 
     private fun openBackActivity() {
-        val intent = Intent(this, ProductListActivity::class.java)
+        val intent = Intent(this, ProductsListActivity::class.java)
         startActivity(intent)
     }
 
