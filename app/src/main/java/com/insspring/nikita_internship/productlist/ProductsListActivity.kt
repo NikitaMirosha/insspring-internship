@@ -15,6 +15,8 @@ import com.insspring.nikita_internship.productlist.ProductsAdapter.SelectedProdu
 import kotlinx.android.synthetic.main.activity_product.*
 import kotlinx.android.synthetic.main.activity_product.vIvArrow
 import kotlinx.android.synthetic.main.activity_products_list.*
+import kotlinx.android.synthetic.main.activity_products_list.bottomNavigationView
+import kotlinx.android.synthetic.main.activity_t_e_s_t.*
 
 class ProductsListActivity : AppCompatActivity(), SelectedProduct {
 
@@ -27,6 +29,9 @@ class ProductsListActivity : AppCompatActivity(), SelectedProduct {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_products_list)
+
+        bottomNavigationView.background = null
+        bottomNavigationView.menu.getItem(2).isEnabled = false
 
         Glide.with(this).load(R.drawable.ic_user_profile).placeholder(R.drawable.ic_user_profile).into(vIvUserProfile)
         Glide.with(this).load(R.drawable.ic_dots_menu).placeholder(R.drawable.ic_dots_menu).into(vIvDotsMenu)
