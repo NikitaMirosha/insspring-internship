@@ -13,10 +13,8 @@ import com.bumptech.glide.Glide
 import com.insspring.nikita_internship.R
 import com.insspring.nikita_internship.productlist.ProductsAdapter.SelectedProduct
 import kotlinx.android.synthetic.main.activity_product.*
-import kotlinx.android.synthetic.main.activity_product.vIvArrow
 import kotlinx.android.synthetic.main.activity_products_list.*
-import kotlinx.android.synthetic.main.activity_products_list.bottomNavigationView
-import kotlinx.android.synthetic.main.activity_t_e_s_t.*
+import kotlinx.android.synthetic.main.activity_products_list.vBottomNavigation
 
 class ProductsListActivity : AppCompatActivity(), SelectedProduct {
 
@@ -30,21 +28,10 @@ class ProductsListActivity : AppCompatActivity(), SelectedProduct {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_products_list)
 
-        bottomNavigationView.background = null
-        bottomNavigationView.menu.getItem(2).isEnabled = false
-
-        Glide.with(this).load(R.drawable.ic_user_profile).placeholder(R.drawable.ic_user_profile).into(vIvUserProfile)
-        Glide.with(this).load(R.drawable.ic_dots_menu).placeholder(R.drawable.ic_dots_menu).into(vIvDotsMenu)
-
-        vTbSearch = findViewById(R.id.vTbSearch)
-        vRvProductsList = findViewById(R.id.vRvProductsList)
-
-        setSupportActionBar(vTbSearch)
-        this.supportActionBar?.title = ""
-
-        val linearLayoutManager = LinearLayoutManager(this)
-        linearLayoutManager.orientation = LinearLayoutManager.HORIZONTAL
-        vRvProductsList?.layoutManager = linearLayoutManager
+        updateImages()
+        updateBottomNavigation()
+        updateSearchToolbar()
+        updateProductListView()
 
         for (i in productsNames) {
             val productsModel = ProductsModel(i)
@@ -66,7 +53,7 @@ class ProductsListActivity : AppCompatActivity(), SelectedProduct {
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        menuInflater.inflate(R.menu.menu, menu)
+        menuInflater.inflate(R.menu.menu_scroll_products, menu)
         val menuItem = menu.findItem(R.id.vSvSearch)
         val searchView = menuItem.actionView as SearchView
         searchView.maxWidth = Int.MAX_VALUE
@@ -89,5 +76,29 @@ class ProductsListActivity : AppCompatActivity(), SelectedProduct {
         return if (menuItemId == R.id.vSvSearch) {
             true
         } else super.onOptionsItemSelected(menuItem)
+    }
+
+    fun updateImages() {
+        Glide.with(this).load(R.drawable.ic_user_profile).placeholder(R.drawable.ic_user_profile).into(vIvUserProfile)
+        Glide.with(this).load(R.drawable.ic_dots_menu).placeholder(R.drawable.ic_dots_menu).into(vIvDotsMenu)
+    }
+
+    fun updateBottomNavigation() {
+        vBottomNavigation.background = null
+        vBottomNavigation.menu.getItem(2).isEnabled = false
+    }
+
+    fun updateSearchToolbar() {
+        vTbSearch = findViewById(R.id.vTbSearchProduct)
+        setSupportActionBar(vTbSearch)
+        this.supportActionBar?.title = ""
+    }
+
+    fun updateProductListView() {
+        vRvProductsList = findViewById(R.id.vRvProductsList)
+
+        val linearLayoutManager = LinearLayoutManager(this)
+        linearLayoutManager.orientation = LinearLayoutManager.HORIZONTAL
+        vRvProductsList?.layoutManager = linearLayoutManager
     }
 }

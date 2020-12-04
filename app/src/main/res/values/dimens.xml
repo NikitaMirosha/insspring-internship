@@ -24,6 +24,8 @@
     <dimen name="dp_160">160dp</dimen>
     <dimen name="dp_210">210dp</dimen>
     <dimen name="dp_240">240dp</dimen>
+    <dimen name="dp_254">254dp</dimen>
+    <dimen name="dp_294">294dp</dimen>
     <dimen name="dp_420">420dp</dimen>
 
 </resources>

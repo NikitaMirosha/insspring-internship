@@ -52,12 +52,12 @@ class ProductActivity : MvpAppCompatActivity(), ProductView {
     }
 
     override fun updateImages() {
-        Glide.with(this).load(drawable.ic_arrow).placeholder(drawable.ic_arrow).into(vIvArrow)
+        Glide.with(this).load(drawable.ic_back_arrow).placeholder(drawable.ic_back_arrow).into(vIvArrow)
         Glide.with(this).load(drawable.ic_heart).placeholder(drawable.ic_heart).into(vIvHeart)
         Glide.with(this).load(drawable.ic_bag).placeholder(drawable.ic_bag).into(vIvBag)
-        Glide.with(this).load(drawable.ic_user).placeholder(drawable.ic_user).into(vIvUserOne)
-        Glide.with(this).load(drawable.ic_user).placeholder(drawable.ic_user).into(vIvUserTwo)
-        Glide.with(this).load(drawable.ic_user).placeholder(drawable.ic_user).into(vIvUserThree)
+        Glide.with(this).load(drawable.ic_user_rate).placeholder(drawable.ic_user_rate).into(vIvUserOne)
+        Glide.with(this).load(drawable.ic_user_rate).placeholder(drawable.ic_user_rate).into(vIvUserTwo)
+        Glide.with(this).load(drawable.ic_user_rate).placeholder(drawable.ic_user_rate).into(vIvUserThree)
         Glide.with(this).load(drawable.ic_star).placeholder(drawable.ic_star).into(vIvStar)
     }
 

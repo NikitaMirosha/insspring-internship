@@ -48,7 +48,7 @@
                         android:layout_height="wrap_content"
                         android:paddingEnd="@dimen/dp_2"
                         tools:ignore="RtlSymmetry"
-                        tools:src="@drawable/ic_arrow" />
+                        tools:src="@drawable/ic_back_arrow" />
 
                 </LinearLayout>
 
@@ -94,7 +94,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="start|center"
                     android:layout_marginStart="@dimen/dp_32"
-                    tools:src="@drawable/ic_user" />
+                    tools:src="@drawable/ic_user_rate" />
 
                 <ImageView
                     android:id="@+id/vIvUserTwo"
@@ -102,7 +102,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="start|center"
                     android:layout_marginStart="@dimen/dp_20"
-                    tools:src="@drawable/ic_user" />
+                    tools:src="@drawable/ic_user_rate" />
 
                 <ImageView
                     android:id="@+id/vIvUserThree"
@@ -110,7 +110,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="start|center"
                     android:layout_marginStart="@dimen/dp_8"
-                    tools:src="@drawable/ic_user" />
+                    tools:src="@drawable/ic_user_rate" />
 
                 <TextView
                     android:id="@+id/vTvRateMark"

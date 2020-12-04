@@ -35,7 +35,7 @@ public class ProductsAdapter extends RecyclerView.Adapter<ProductsAdapter.UsersA
     public ProductsAdapter.UsersAdapterVh onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         context = parent.getContext();
 
-        return new UsersAdapterVh(LayoutInflater.from(context).inflate(R.layout.activity_scroll_products, null));
+        return new UsersAdapterVh(LayoutInflater.from(context).inflate(R.layout.activity_products_scroll, null));
     }
 
     @Override
@@ -111,8 +111,8 @@ public class ProductsAdapter extends RecyclerView.Adapter<ProductsAdapter.UsersA
 
         public UsersAdapterVh(@NonNull View itemView) {
             super(itemView);
-            tvPrefix = itemView.findViewById(R.id.prefix);
-            tvUsername = itemView.findViewById(R.id.username);
+            tvPrefix = itemView.findViewById(R.id.vTvPrefixCard);
+            tvUsername = itemView.findViewById(R.id.vTvProductNameCard);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
