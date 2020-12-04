@@ -42,7 +42,7 @@ class ProductsListActivity : AppCompatActivity(), SelectedProduct {
         vRvProductsList?.setAdapter(productsAdapter)
     }
 
-    override fun selectedProduct(productsModel: ProductsModel) {
+    override fun selectedProduct(productsModel: ProductsModel?) {
         startActivity(
             Intent(
                 this@ProductsListActivity,
