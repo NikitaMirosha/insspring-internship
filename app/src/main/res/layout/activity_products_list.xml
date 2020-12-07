@@ -57,7 +57,10 @@
         android:layout_marginStart="@dimen/dp_16"
         android:layout_marginEnd="@dimen/dp_16"
         android:layout_marginBottom="@dimen/dp_24"
-        android:background="@drawable/bg_white_rec_round_16" />
+        app:theme="@style/ToolBar"
+        android:background="@drawable/bg_white_rec_round_16" >
+
+    </androidx.appcompat.widget.Toolbar>
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"

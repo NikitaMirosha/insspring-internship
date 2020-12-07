@@ -1,15 +1,21 @@
 package com.insspring.nikita_internship.productlist
 
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
 import androidx.appcompat.widget.Toolbar
+import androidx.core.content.ContextCompat
+import androidx.core.view.isInvisible
+import androidx.core.view.isVisible
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.google.android.material.internal.ContextUtils.getActivity
 import com.insspring.nikita_internship.R
 import com.insspring.nikita_internship.productlist.ProductsAdapter.SelectedProduct
 import kotlinx.android.synthetic.main.activity_product.*
@@ -18,10 +24,10 @@ import kotlinx.android.synthetic.main.activity_products_list.vBottomNavigation
 
 class ProductsListActivity : AppCompatActivity(), SelectedProduct {
 
-    var vTbSearch: Toolbar? = null
+    var vTbSearchProduct: Toolbar? = null
     var vRvProductsList: RecyclerView? = null
     var productsListModel: MutableList<ProductsModel> = ArrayList()
-    var productsNames = arrayOf("Orange", "Apple", "Lemon", "Pineapple")
+    var productsNames = arrayOf("Orange", "Apple", "Lemon", "Pear")
     var productsAdapter: ProductsAdapter? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -89,9 +95,9 @@ class ProductsListActivity : AppCompatActivity(), SelectedProduct {
     }
 
     fun updateSearchToolbar() {
-        vTbSearch = findViewById(R.id.vTbSearchProduct)
-        setSupportActionBar(vTbSearch)
-        this.supportActionBar?.title = ""
+        vTbSearchProduct = findViewById(R.id.vTbSearchProduct)
+        setSupportActionBar(vTbSearchProduct)
+        this.supportActionBar?.title = "Search..."
     }
 
     fun updateProductListView() {

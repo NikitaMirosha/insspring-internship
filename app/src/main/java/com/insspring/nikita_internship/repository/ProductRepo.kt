@@ -6,6 +6,7 @@ import java.math.BigDecimal
 class ProductRepo {
 
     // context
+    // ArrayList "Orange", "Apple", "Lemon", "Pear"
     fun getProduct(): ProductModel {
         return ProductModel(
             productName = "Orange",
