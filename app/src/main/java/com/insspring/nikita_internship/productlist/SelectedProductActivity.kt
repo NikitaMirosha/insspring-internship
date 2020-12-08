@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.insspring.nikita_internship.R
+import com.insspring.nikita_internship.model.ProductModel
 
 class SelectedProductActivity : AppCompatActivity() {
 
@@ -17,7 +18,7 @@ class SelectedProductActivity : AppCompatActivity() {
         val intent = intent
 
         if (intent.extras != null) {
-            val userModel = intent.getSerializableExtra("data") as ProductsModel
+            val userModel = intent.getSerializableExtra("data") as ProductModel
             vTvSelectedProduct?.setText(userModel.productName)
         }
     }

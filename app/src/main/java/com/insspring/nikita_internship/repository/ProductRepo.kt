@@ -24,7 +24,7 @@ class ProductRepo {
                     " Each type belongs to the citrus family of fruits and grows on trees.\n\n ",
             bestSeller = "Sweet Products Ltd.",
             rateMark = BigDecimal.valueOf(5.6),
-            price = BigDecimal.valueOf(19.99)
+            productPrice = BigDecimal.valueOf(19.99)
         )
     }
 

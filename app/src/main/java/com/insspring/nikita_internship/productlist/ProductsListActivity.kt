@@ -1,32 +1,25 @@
 package com.insspring.nikita_internship.productlist
 
-import android.content.Intent
-import android.graphics.Color
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
 import androidx.appcompat.widget.Toolbar
-import androidx.core.content.ContextCompat
-import androidx.core.view.isInvisible
-import androidx.core.view.isVisible
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.google.android.material.internal.ContextUtils.getActivity
 import com.insspring.nikita_internship.R
-import com.insspring.nikita_internship.productlist.ProductsAdapter.SelectedProduct
-import kotlinx.android.synthetic.main.activity_product.*
+import com.insspring.nikita_internship.model.ProductModel
 import kotlinx.android.synthetic.main.activity_products_list.*
-import kotlinx.android.synthetic.main.activity_products_list.vBottomNavigation
+import kotlinx.android.synthetic.main.item_product.view.*
+import moxy.MvpAppCompatActivity
 
-class ProductsListActivity : AppCompatActivity(), SelectedProduct {
+class ProductsListActivity : MvpAppCompatActivity() {
 
     var vTbSearchProduct: Toolbar? = null
     var vRvProductsList: RecyclerView? = null
-    var productsListModel: MutableList<ProductsModel> = ArrayList()
+    var productsListModel: MutableList<ProductModel> = ArrayList()
     var productsNames = arrayOf("Orange", "Apple", "Lemon", "Pear")
     var productsAdapter: ProductsAdapter? = null
 
@@ -34,28 +27,24 @@ class ProductsListActivity : AppCompatActivity(), SelectedProduct {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_products_list)
 
+        //vTvProductNameCard.text = getString(R.string.product_name, product.productName)
+
         updateImages()
         updateBottomNavigation()
         updateSearchToolbar()
         updateProductListView()
 
+//        productsAdapter = ProductsAdapter(itemClicked = {
+//
+//        })
+
         for (i in productsNames) {
-            val productsModel = ProductsModel(i)
+            val productsModel = ProductModel(i)
             productsListModel.add(productsModel)
         }
 
-        productsAdapter = ProductsAdapter(productsListModel, this)
-        vRvProductsList?.setAdapter(productsAdapter)
-    }
-
-    override fun selectedProduct(productsModel: ProductsModel?) {
-        startActivity(
-            Intent(
-                this@ProductsListActivity,
-                SelectedProductActivity::class.java
-            )
-                .putExtra("data", productsModel)
-        )
+        productsAdapter = ProductsAdapter(productsListModel, itemClicked = {} )
+        vRvProductsList?.adapter = productsAdapter
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -85,13 +74,15 @@ class ProductsListActivity : AppCompatActivity(), SelectedProduct {
     }
 
     fun updateImages() {
-        Glide.with(this).load(R.drawable.ic_user_profile).placeholder(R.drawable.ic_user_profile).into(vIvUserProfile)
-        Glide.with(this).load(R.drawable.ic_dots_menu).placeholder(R.drawable.ic_dots_menu).into(vIvDotsMenu)
+        Glide.with(this).load(R.drawable.ic_user_profile).placeholder(R.drawable.ic_user_profile)
+            .into(vIvUserProfile)
+        Glide.with(this).load(R.drawable.ic_dots_menu).placeholder(R.drawable.ic_dots_menu)
+            .into(vIvDotsMenu)
+        //Glide.with(this).load(R.drawable.ic_like_product_list).placeholder(R.drawable.ic_like_product_list).into(vIvLikeProductList)
     }
 
     fun updateBottomNavigation() {
         vBottomNavigation.background = null
-        vBottomNavigation.menu.getItem(2).isEnabled = false
     }
 
     fun updateSearchToolbar() {
@@ -102,7 +93,6 @@ class ProductsListActivity : AppCompatActivity(), SelectedProduct {
 
     fun updateProductListView() {
         vRvProductsList = findViewById(R.id.vRvProductsList)
-
         val linearLayoutManager = LinearLayoutManager(this)
         linearLayoutManager.orientation = LinearLayoutManager.HORIZONTAL
         vRvProductsList?.layoutManager = linearLayoutManager

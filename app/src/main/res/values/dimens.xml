@@ -3,6 +3,7 @@
 
     <dimen name="sp_6">6sp</dimen>
     <dimen name="sp_16">16sp</dimen>
+    <dimen name="sp_22">22sp</dimen>
 
     <dimen name="dp_0">0dp</dimen>
     <dimen name="dp_2">2dp</dimen>
@@ -24,7 +25,7 @@
     <dimen name="dp_160">160dp</dimen>
     <dimen name="dp_210">210dp</dimen>
     <dimen name="dp_240">240dp</dimen>
-    <dimen name="dp_254">254dp</dimen>
+    <dimen name="dp_234">234dp</dimen>
     <dimen name="dp_294">294dp</dimen>
     <dimen name="dp_420">420dp</dimen>
 
