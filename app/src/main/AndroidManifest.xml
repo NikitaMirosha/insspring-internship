@@ -10,43 +10,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
 
-        <activity android:name=".productlist.TEST">
-            <intent-filter>
-                <action android:name="TEST" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-
-
-        <activity android:name=".product.ProductActivity">
+        <activity android:name=".selectedproduct.SelectedProductActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".productlist.ProductsListActivity">
+
+        <activity android:name=".productsmenu.ProductsMenuActivity">
             <intent-filter>
                 <action android:name="ProductsListActivity" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".productlist.SelectedProductActivity">
-            <intent-filter>
-                <action android:name="SelectedProductActivity" />
 
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".productlist.ProductListActivity__">
-            <intent-filter>
-                <action android:name="ProductListActivity" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
         <activity android:name=".addtobag.AddToBagActivity">
             <intent-filter>
                 <action android:name="AddToBagActivity" />

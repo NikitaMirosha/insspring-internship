@@ -1,11 +1,11 @@
-package com.insspring.nikita_internship.product
+package com.insspring.nikita_internship.selectedproduct
 
 import moxy.InjectViewState
 import moxy.MvpPresenter
 import com.insspring.nikita_internship.repository.ProductRepo
 
 @InjectViewState
-class ProductPresenter : MvpPresenter<ProductView>() {
+class SelectedProductPresenter : MvpPresenter<SelectedProductView>() {
 
     private val repo = ProductRepo()
     private val model = repo.getProduct()

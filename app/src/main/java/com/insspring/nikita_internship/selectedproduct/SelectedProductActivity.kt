@@ -1,4 +1,4 @@
-package com.insspring.nikita_internship.product
+package com.insspring.nikita_internship.selectedproduct
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,19 +6,19 @@ import com.bumptech.glide.Glide
 import com.insspring.nikita_internship.R.*
 import com.insspring.nikita_internship.addtobag.AddToBagActivity
 import com.insspring.nikita_internship.model.ProductModel
-import com.insspring.nikita_internship.productlist.ProductsListActivity
-import kotlinx.android.synthetic.main.activity_product.*
+import com.insspring.nikita_internship.productsmenu.ProductsMenuActivity
+import kotlinx.android.synthetic.main.activity_selected_product.*
 import moxy.MvpAppCompatActivity
 import moxy.presenter.InjectPresenter
 
-class ProductActivity : MvpAppCompatActivity(), ProductView {
+class SelectedProductActivity : MvpAppCompatActivity(), SelectedProductView {
 
     @InjectPresenter
-    lateinit var productPresenter: ProductPresenter
+    lateinit var productPresenter: SelectedProductPresenter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(layout.activity_product)
+        setContentView(layout.activity_selected_product)
 
         initListeners()
     }
@@ -34,7 +34,7 @@ class ProductActivity : MvpAppCompatActivity(), ProductView {
     }
 
     private fun openBackActivity() {
-        val intent = Intent(this, ProductsListActivity::class.java)
+        val intent = Intent(this, ProductsMenuActivity::class.java)
         startActivity(intent)
     }
 
@@ -52,13 +52,20 @@ class ProductActivity : MvpAppCompatActivity(), ProductView {
     }
 
     override fun updateImages() {
-        Glide.with(this).load(drawable.ic_back_arrow).placeholder(drawable.ic_back_arrow).into(vIvArrow)
-        Glide.with(this).load(drawable.ic_like_product).placeholder(drawable.ic_like_product).into(vIvHeart)
-        Glide.with(this).load(drawable.ic_bag).placeholder(drawable.ic_bag).into(vIvBag)
-        Glide.with(this).load(drawable.ic_user_rate).placeholder(drawable.ic_user_rate).into(vIvUserOne)
-        Glide.with(this).load(drawable.ic_user_rate).placeholder(drawable.ic_user_rate).into(vIvUserTwo)
-        Glide.with(this).load(drawable.ic_user_rate).placeholder(drawable.ic_user_rate).into(vIvUserThree)
-        Glide.with(this).load(drawable.ic_star).placeholder(drawable.ic_star).into(vIvStar)
+        Glide.with(this).load(drawable.ic_back_arrow).placeholder(drawable.ic_back_arrow)
+            .into(vIvArrow)
+        Glide.with(this).load(drawable.ic_like_product).placeholder(drawable.ic_like_product)
+            .into(vIvHeart)
+        Glide.with(this).load(drawable.ic_bag).placeholder(drawable.ic_bag)
+            .into(vIvBag)
+        Glide.with(this).load(drawable.ic_user_rate).placeholder(drawable.ic_user_rate)
+            .into(vIvUserOne)
+        Glide.with(this).load(drawable.ic_user_rate).placeholder(drawable.ic_user_rate)
+            .into(vIvUserTwo)
+        Glide.with(this).load(drawable.ic_user_rate).placeholder(drawable.ic_user_rate)
+            .into(vIvUserThree)
+        Glide.with(this).load(drawable.ic_star).placeholder(drawable.ic_star)
+            .into(vIvStar)
     }
 
 }

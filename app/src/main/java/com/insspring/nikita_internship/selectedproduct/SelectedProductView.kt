@@ -1,11 +1,11 @@
-package com.insspring.nikita_internship.product
+package com.insspring.nikita_internship.selectedproduct
 
 import com.insspring.nikita_internship.model.ProductModel
 import moxy.MvpView
 import moxy.viewstate.strategy.AddToEndSingleStrategy
 import moxy.viewstate.strategy.StateStrategyType
 
-interface ProductView : MvpView {
+interface SelectedProductView : MvpView {
     @StateStrategyType(AddToEndSingleStrategy::class)
     fun updateProduct(product: ProductModel)
 

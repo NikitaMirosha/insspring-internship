@@ -1,51 +1,47 @@
-package com.insspring.nikita_internship.productlist
+package com.insspring.nikita_internship.productsmenu
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.widget.SearchView
-import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.insspring.nikita_internship.R
 import com.insspring.nikita_internship.model.ProductModel
-import kotlinx.android.synthetic.main.activity_products_list.*
+import com.insspring.nikita_internship.selectedproduct.SelectedProductActivity
+import kotlinx.android.synthetic.main.activity_products_menu.*
 import moxy.MvpAppCompatActivity
 
-class ProductsListActivity : MvpAppCompatActivity() {
+class ProductsMenuActivity : MvpAppCompatActivity() {
 
-    var vTbSearchProduct: Toolbar? = null
     var productsListModel: MutableList<ProductModel> = ArrayList()
     var productsNames = arrayOf("Orange", "Apple", "Lemon", "Pear")
-    lateinit var productsAdapter: ProductsAdapter
+    lateinit var productsMenuAdapter: ProductsMenuAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_products_list)
+        setContentView(R.layout.activity_products_menu)
 
         updateImages()
-        updateBottomNavigation()
         updateSearchToolbar()
+        updateBottomNavigation()
         updateProductListView()
 
-//        productsAdapter = ProductsAdapter(
-//            itemClicked = {
-//                onLocationItemSelected(it)
-//        })
-
         for (i in productsNames) {
-            val productsModel = ProductModel(i)
-            productsListModel.add(productsModel)
+            val productModel = ProductModel(i)
+            productsListModel.add(productModel)
         }
 
-        productsAdapter = ProductsAdapter(productsListModel, itemClicked = {})
-        //productsAdapter.setItems(productsListModel)
-        vRvProductsList.adapter = productsAdapter
+        productsMenuAdapter = ProductsMenuAdapter(productsListModel, itemClicked = {
+            onLocationItemSelected(it)
+        })
+        vRvProductsList.adapter = productsMenuAdapter
     }
 
     private fun onLocationItemSelected(it: ProductModel) {
-        // ereretg
+        val intent = Intent(this, SelectedProductActivity::class.java)
+        startActivity(intent)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -53,17 +49,6 @@ class ProductsListActivity : MvpAppCompatActivity() {
         val menuItem = menu.findItem(R.id.vSvSearch)
         val searchView = menuItem.actionView as SearchView
         searchView.maxWidth = Int.MAX_VALUE
-
-        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
-            override fun onQueryTextSubmit(query: String): Boolean {
-                return false
-            }
-
-            override fun onQueryTextChange(newSearchText: String): Boolean {
-                productsAdapter?.filter?.filter(newSearchText)
-                return true
-            }
-        })
         return true
     }
 
@@ -79,17 +64,17 @@ class ProductsListActivity : MvpAppCompatActivity() {
             .into(vIvUserProfile)
         Glide.with(this).load(R.drawable.ic_dots_menu).placeholder(R.drawable.ic_dots_menu)
             .into(vIvDotsMenu)
-        //Glide.with(this).load(R.drawable.ic_like_product_list).placeholder(R.drawable.ic_like_product_list).into(vIvLikeProductList)
+//        Glide.with(this).load(R.drawable.ic_like_product_list)
+//            .placeholder(R.drawable.ic_like_product_list).into(vIvLikeProductList)
+    }
+
+    fun updateSearchToolbar() {
+        setSupportActionBar(vTbSearchProduct)
+        this.supportActionBar?.title = "Search..."
     }
 
     fun updateBottomNavigation() {
         vBottomNavigation.background = null
-    }
-
-    fun updateSearchToolbar() {
-        vTbSearchProduct = findViewById(R.id.vTbSearchProduct)
-        setSupportActionBar(vTbSearchProduct)
-        this.supportActionBar?.title = "Search..."
     }
 
     fun updateProductListView() {
