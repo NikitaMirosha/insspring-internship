@@ -70,6 +70,7 @@
             android:id="@+id/vRvProductsList"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            tools:listitem="@layout/item_product"
             android:overScrollMode="never" />
 
         <com.google.android.material.bottomappbar.BottomAppBar

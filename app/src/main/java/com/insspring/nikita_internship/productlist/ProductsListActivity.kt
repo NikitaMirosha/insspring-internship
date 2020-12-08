@@ -3,7 +3,6 @@ package com.insspring.nikita_internship.productlist
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
 import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -12,30 +11,27 @@ import com.bumptech.glide.Glide
 import com.insspring.nikita_internship.R
 import com.insspring.nikita_internship.model.ProductModel
 import kotlinx.android.synthetic.main.activity_products_list.*
-import kotlinx.android.synthetic.main.item_product.view.*
 import moxy.MvpAppCompatActivity
 
 class ProductsListActivity : MvpAppCompatActivity() {
 
     var vTbSearchProduct: Toolbar? = null
-    var vRvProductsList: RecyclerView? = null
     var productsListModel: MutableList<ProductModel> = ArrayList()
     var productsNames = arrayOf("Orange", "Apple", "Lemon", "Pear")
-    var productsAdapter: ProductsAdapter? = null
+    lateinit var productsAdapter: ProductsAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_products_list)
-
-        //vTvProductNameCard.text = getString(R.string.product_name, product.productName)
 
         updateImages()
         updateBottomNavigation()
         updateSearchToolbar()
         updateProductListView()
 
-//        productsAdapter = ProductsAdapter(itemClicked = {
-//
+//        productsAdapter = ProductsAdapter(
+//            itemClicked = {
+//                onLocationItemSelected(it)
 //        })
 
         for (i in productsNames) {
@@ -43,8 +39,13 @@ class ProductsListActivity : MvpAppCompatActivity() {
             productsListModel.add(productsModel)
         }
 
-        productsAdapter = ProductsAdapter(productsListModel, itemClicked = {} )
-        vRvProductsList?.adapter = productsAdapter
+        productsAdapter = ProductsAdapter(productsListModel, itemClicked = {})
+        //productsAdapter.setItems(productsListModel)
+        vRvProductsList.adapter = productsAdapter
+    }
+
+    private fun onLocationItemSelected(it: ProductModel) {
+        // ereretg
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -92,9 +93,8 @@ class ProductsListActivity : MvpAppCompatActivity() {
     }
 
     fun updateProductListView() {
-        vRvProductsList = findViewById(R.id.vRvProductsList)
         val linearLayoutManager = LinearLayoutManager(this)
         linearLayoutManager.orientation = LinearLayoutManager.HORIZONTAL
-        vRvProductsList?.layoutManager = linearLayoutManager
+        vRvProductsList.layoutManager = linearLayoutManager
     }
 }

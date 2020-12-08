@@ -11,11 +11,11 @@ import com.insspring.nikita_internship.model.ProductModel
 import java.util.*
 
 class ProductsAdapter(
-    private var productsModelList: List<ProductModel>,
+    productsModelList: List<ProductModel>,
     var itemClicked: (ProductModel) -> Unit
-) : BaseListAdapter<ProductModel>(), Filterable {
+) : BaseListAdapter<ProductModel>(productsModelList), Filterable {
     private val getProductsModelListFiltered: List<ProductModel>
-
+// productsModelList: List<ProductModel> не передавать в конструктор адаптера
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
@@ -51,7 +51,7 @@ class ProductsAdapter(
             }
 
             override fun publishResults(charSequence: CharSequence, filterResults: FilterResults) {
-                productsModelList = filterResults.values as List<ProductModel>
+                //productsModelList = filterResults.values as List<ProductModel>
 
             }
         }
