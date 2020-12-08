@@ -1,14 +1,9 @@
 package com.insspring.nikita_internship.ui.product
 
+import com.delivery.ui.base.BaseMvpView
 import com.insspring.nikita_internship.model.ProductModel
-import moxy.MvpView
-import moxy.viewstate.strategy.AddToEndSingleStrategy
-import moxy.viewstate.strategy.StateStrategyType
 
-interface ProductView : MvpView {
-    @StateStrategyType(AddToEndSingleStrategy::class)
+interface ProductView : BaseMvpView {
     fun updateProduct(product: ProductModel)
-
-    @StateStrategyType(AddToEndSingleStrategy::class)
     fun updateImages()
 }

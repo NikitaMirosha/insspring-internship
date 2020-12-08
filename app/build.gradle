@@ -68,11 +68,10 @@ dependencies {
     }
 
     // Moxy
-    implementation 'com.github.moxy-community:moxy:2.2.0'
-    kapt "com.github.moxy-community:moxy-compiler:2.2.0"
-    implementation "com.github.moxy-community:moxy-android:2.2.0"
-    implementation "com.github.moxy-community:moxy-app-compat:2.2.0"
-    implementation "com.github.moxy-community:moxy-material:2.2.0"
+    implementation "com.arello-mobile:moxy:1.5.6"
+    implementation "com.arello-mobile:moxy-android:1.5.6"
+    implementation "com.arello-mobile:moxy-app-compat:1.5.6"
+    kapt "com.arello-mobile:moxy-compiler:1.5.6"
 
     // ViewPager2
     implementation 'androidx.viewpager2:viewpager2:1.0.0'

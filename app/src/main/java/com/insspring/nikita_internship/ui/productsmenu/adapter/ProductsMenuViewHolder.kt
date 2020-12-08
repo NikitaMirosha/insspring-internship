@@ -1,4 +1,4 @@
-package com.insspring.nikita_internship.ui.productsmenu.viewholder
+package com.insspring.nikita_internship.ui.productsmenu.adapter
 
 import android.view.View
 import com.bumptech.glide.Glide

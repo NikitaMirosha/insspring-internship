@@ -3,7 +3,7 @@ package com.delivery.ui.base
 
 import android.os.Bundle
 import androidx.fragment.app.FragmentActivity
-import moxy.MvpDelegate
+import com.arellomobile.mvp.MvpDelegate
 
 abstract class MvpActivity : FragmentActivity() {
     private var mMvpDelegate: MvpDelegate<out MvpActivity>? = null

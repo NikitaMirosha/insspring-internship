@@ -7,7 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.LayoutRes
-import moxy.MvpDialogFragment
+import com.arellomobile.mvp.MvpDialogFragment
 
 abstract class BaseMvpDialogFragment : MvpDialogFragment(),
     BaseMvpView {

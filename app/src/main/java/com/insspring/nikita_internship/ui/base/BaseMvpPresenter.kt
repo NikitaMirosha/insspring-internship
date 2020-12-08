@@ -1,7 +1,7 @@
 package com.delivery.ui.base
 
 import androidx.annotation.StringRes
-import moxy.MvpPresenter
+import com.arellomobile.mvp.MvpPresenter
 
 abstract class BaseMvpPresenter<V : BaseMvpView> : MvpPresenter<V>() {
 

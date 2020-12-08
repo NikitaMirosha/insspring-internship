@@ -4,7 +4,7 @@ package com.delivery.ui.base
 import android.os.Build
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import moxy.MvpDelegate
+import com.arellomobile.mvp.MvpDelegate
 
 open class MvpFragment : Fragment() {
 

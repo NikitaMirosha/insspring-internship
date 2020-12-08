@@ -1,6 +1,6 @@
 package com.delivery.ui.base
 
-import moxy.MvpView
+import com.arellomobile.mvp.MvpView
 
 interface BaseMvpView : MvpView {
     fun showMessage(resId: Int)

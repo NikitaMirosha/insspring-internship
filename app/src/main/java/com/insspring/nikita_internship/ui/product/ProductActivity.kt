@@ -2,24 +2,22 @@ package com.insspring.nikita_internship.ui.product
 
 import android.content.Intent
 import android.os.Bundle
+import com.arellomobile.mvp.presenter.InjectPresenter
 import com.bumptech.glide.Glide
+import com.delivery.ui.base.BaseMvpActivity
 import com.insspring.nikita_internship.R.*
 import com.insspring.nikita_internship.ui.addtobag.AddToBagActivity
 import com.insspring.nikita_internship.model.ProductModel
 import com.insspring.nikita_internship.ui.productsmenu.ProductsMenuActivity
 import kotlinx.android.synthetic.main.activity_product.*
-import moxy.MvpAppCompatActivity
-import moxy.presenter.InjectPresenter
 
-class ProductActivity : MvpAppCompatActivity(), ProductView {
+class ProductActivity : BaseMvpActivity(), ProductView {
 
     @InjectPresenter
     lateinit var productPresenter: ProductPresenter
+    override fun getLayoutId(): Int = layout.activity_product
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(layout.activity_product)
-
+    override fun onCreateActivity(savedInstanceState: Bundle?) {
         initListeners()
     }
 

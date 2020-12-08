@@ -50,15 +50,24 @@
 
     </LinearLayout>
 
-    <SearchView
-        android:id="@+id/vSvSearchProduct"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="horizontal"
         android:layout_marginStart="@dimen/dp_16"
         android:layout_marginEnd="@dimen/dp_16"
         android:layout_marginBottom="@dimen/dp_32"
-        app:theme="@style/SearchView"
-        android:background="@drawable/bg_white_rec_round_16"/>
+        android:background="@drawable/bg_white_rec_round_16">
+
+        <EditText
+            android:id="@+id/vEtSearchProduct"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:theme="@style/EditText"
+            android:textSize="@dimen/sp_22"
+            android:textColor="@color/black"/>
+
+    </LinearLayout>
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"

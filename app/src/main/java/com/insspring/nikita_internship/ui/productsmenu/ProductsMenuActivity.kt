@@ -1,16 +1,15 @@
 package com.insspring.nikita_internship.ui.productsmenu
 
 import android.content.Intent
-import android.graphics.Color
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.EditText
 import androidx.appcompat.widget.SearchView
-import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.arellomobile.mvp.presenter.InjectPresenter
 import com.bumptech.glide.Glide
 import com.delivery.ui.base.BaseMvpActivity
+import com.insspring.nikita_internship.ui.utils.SimpleTextWatcher
 import com.insspring.nikita_internship.R
 import com.insspring.nikita_internship.model.ProductModel
 import com.insspring.nikita_internship.ui.addtobag.AddToBagActivity
@@ -18,13 +17,15 @@ import com.insspring.nikita_internship.ui.product.ProductActivity
 import com.insspring.nikita_internship.ui.productsmenu.adapter.ProductsMenuAdapter
 import kotlinx.android.synthetic.main.activity_products_menu.*
 
-class ProductsMenuActivity : BaseMvpActivity() {
+class ProductsMenuActivity : BaseMvpActivity(), ProductMenuView {
 
-    var productsListModel: MutableList<ProductModel> = ArrayList()
-    var productsNames = arrayOf("Orange", "Apple", "Lemon", "Pear")
+
     lateinit var productsMenuAdapter: ProductsMenuAdapter
 
     override fun getLayoutId(): Int = R.layout.activity_products_menu
+
+    @InjectPresenter
+    lateinit var productMenuPresenter: ProductMenuPresenter
 
     override fun onCreateActivity(savedInstanceState: Bundle?) {
 
@@ -33,19 +34,25 @@ class ProductsMenuActivity : BaseMvpActivity() {
         updateProductListView()
 
         initListener()
+        initOnTextChangedListener()
 
-        // fix
-        vSvSearchProduct.setBackgroundColor(Color.RED)
 
-        for (i in productsNames) {
-            val productModel = ProductModel(i)
-            productsListModel.add(productModel)
-        }
 
-        productsMenuAdapter = ProductsMenuAdapter(productsListModel, itemClicked = {
+        // presenter
+        productsMenuAdapter = ProductsMenuAdapter(itemClicked = {
             onLocationItemSelected(it)
         })
         vRvProductsList.adapter = productsMenuAdapter
+    }
+
+    private fun initOnTextChangedListener() {
+        vEtSearchProduct.addTextChangedListener(
+            object : SimpleTextWatcher() {
+                override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                    productMenuPresenter.onTextChanged(s.toString())
+                }
+            }
+        )
     }
 
     private fun onLocationItemSelected(it: ProductModel) {
@@ -55,12 +62,11 @@ class ProductsMenuActivity : BaseMvpActivity() {
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.menu_scroll_products, menu)
-        val menuItem = menu.findItem(R.id.vSvSearch)
-        val searchView = menuItem.actionView as SearchView
-        searchView.maxWidth = Int.MAX_VALUE
         return true
     }
 
+    // потавить private
+    // delete
     override fun onOptionsItemSelected(menuItem: MenuItem): Boolean {
         val menuItemId = menuItem.itemId
         return if (menuItemId == R.id.vSvSearch) {
@@ -94,5 +100,9 @@ class ProductsMenuActivity : BaseMvpActivity() {
     private fun addToBagActivity() {
         val intent = Intent(this, AddToBagActivity::class.java)
         startActivity(intent)
+    }
+
+    override fun updateProducts(products: List<ProductModel>) {
+        productsMenuAdapter.setItems(products)
     }
 }
