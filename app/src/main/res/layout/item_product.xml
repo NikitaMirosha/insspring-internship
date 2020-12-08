@@ -3,10 +3,11 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="@dimen/dp_234"
-    android:layout_height="@dimen/dp_294"
+    android:layout_width="@dimen/dp_200"
+    android:layout_height="@dimen/dp_310"
     android:layout_gravity="center"
-    android:layout_margin="@dimen/dp_6"
+    android:layout_marginStart="@dimen/dp_16"
+    android:layout_marginEnd="@dimen/dp_16"
     android:elevation="@dimen/dp_12"
     app:cardCornerRadius="@dimen/dp_24">
 
@@ -15,7 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
-        android:src="@drawable/pic_lemon" />
+        android:src="@drawable/pic_orange" />
 
     <LinearLayout
         android:layout_width="wrap_content"

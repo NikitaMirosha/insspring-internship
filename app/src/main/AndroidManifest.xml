@@ -10,7 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
 
-        <activity android:name=".selectedproduct.SelectedProductActivity">
+        <activity android:name="com.insspring.nikita_internship.ui.product.ProductActivity">
+            <intent-filter>
+                <action android:name="AddToBagActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.insspring.nikita_internship.ui.productsmenu.ProductsMenuActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -18,15 +26,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".productsmenu.ProductsMenuActivity">
-            <intent-filter>
-                <action android:name="ProductsListActivity" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-
-        <activity android:name=".addtobag.AddToBagActivity">
+        <activity android:name="com.insspring.nikita_internship.ui.addtobag.AddToBagActivity">
             <intent-filter>
                 <action android:name="AddToBagActivity" />
 

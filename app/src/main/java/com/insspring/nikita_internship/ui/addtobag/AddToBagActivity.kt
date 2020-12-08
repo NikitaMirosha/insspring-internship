@@ -1,4 +1,4 @@
-package com.insspring.nikita_internship.addtobag
+package com.insspring.nikita_internship.ui.addtobag
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

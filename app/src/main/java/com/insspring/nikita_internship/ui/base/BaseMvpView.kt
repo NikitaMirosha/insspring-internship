@@ -7,6 +7,4 @@ interface BaseMvpView : MvpView {
     fun showMessage(msg: String?)
     fun hideKeyboard()
     fun handleRestError(e: Throwable)
-
-    fun showProductCantBeReadyDueToTime()
 }

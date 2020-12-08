@@ -50,17 +50,15 @@
 
     </LinearLayout>
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/vTbSearchProduct"
+    <SearchView
+        android:id="@+id/vSvSearchProduct"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
+        android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/dp_16"
         android:layout_marginEnd="@dimen/dp_16"
-        android:layout_marginBottom="@dimen/dp_24"
-        android:background="@drawable/bg_white_rec_round_16"
-        app:theme="@style/ToolBar">
-
-    </androidx.appcompat.widget.Toolbar>
+        android:layout_marginBottom="@dimen/dp_32"
+        app:theme="@style/SearchView"
+        android:background="@drawable/bg_white_rec_round_16"/>
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
@@ -94,6 +92,7 @@
         </com.google.android.material.bottomappbar.BottomAppBar>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/vFabAddToBag"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/colorOrange"

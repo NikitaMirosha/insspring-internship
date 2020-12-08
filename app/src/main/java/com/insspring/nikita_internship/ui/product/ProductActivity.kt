@@ -1,24 +1,24 @@
-package com.insspring.nikita_internship.selectedproduct
+package com.insspring.nikita_internship.ui.product
 
 import android.content.Intent
 import android.os.Bundle
 import com.bumptech.glide.Glide
 import com.insspring.nikita_internship.R.*
-import com.insspring.nikita_internship.addtobag.AddToBagActivity
+import com.insspring.nikita_internship.ui.addtobag.AddToBagActivity
 import com.insspring.nikita_internship.model.ProductModel
-import com.insspring.nikita_internship.productsmenu.ProductsMenuActivity
-import kotlinx.android.synthetic.main.activity_selected_product.*
+import com.insspring.nikita_internship.ui.productsmenu.ProductsMenuActivity
+import kotlinx.android.synthetic.main.activity_product.*
 import moxy.MvpAppCompatActivity
 import moxy.presenter.InjectPresenter
 
-class SelectedProductActivity : MvpAppCompatActivity(), SelectedProductView {
+class ProductActivity : MvpAppCompatActivity(), ProductView {
 
     @InjectPresenter
-    lateinit var productPresenter: SelectedProductPresenter
+    lateinit var productPresenter: ProductPresenter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(layout.activity_selected_product)
+        setContentView(layout.activity_product)
 
         initListeners()
     }

@@ -20,7 +20,7 @@
         <item name="android:editTextColor">@color/colorOrange</item>
     </style>
 
-    <style name="ToolBar">
+    <style name="SearchView">
         <item name="android:editTextColor">@color/colorGray</item>
         <item name="colorAccent">@color/colorGray</item>
         <item name="android:tint">@color/colorGray</item>

@@ -1,4 +1,4 @@
-package com.insspring.nikita_internship.repository
+package com.insspring.nikita_internship.repo
 
 import com.insspring.nikita_internship.model.ProductModel
 import java.math.BigDecimal

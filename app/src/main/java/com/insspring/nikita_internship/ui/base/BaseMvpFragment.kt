@@ -49,8 +49,4 @@ abstract class BaseMvpFragment : MvpFragment(),
     }
 
     open fun scrollToTheTop() {}
-
-    override fun showProductCantBeReadyDueToTime() {
-        (activity as? BaseMvpActivity)?.showProductCantBeReadyDueToTime()
-    }
 }
