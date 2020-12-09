@@ -13,7 +13,6 @@ import kotlinx.android.extensions.LayoutContainer
  */
 abstract class BaseViewHolder<in T>(view: View) : RecyclerView.ViewHolder(view), LayoutContainer {
 
-
     abstract fun bind(model: T)
 
     override val containerView: View?
@@ -32,7 +31,6 @@ abstract class BaseViewHolder<in T>(view: View) : RecyclerView.ViewHolder(view),
      * Override this method to cancel any behaviour you don't want to continue after the view has been recycled
      * This is most likely async behaviour
      */
-
 
     fun getColor(@ColorRes color: Int) = ContextCompat.getColor(itemView.context, color)
 }

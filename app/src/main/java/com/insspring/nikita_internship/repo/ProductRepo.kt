@@ -5,8 +5,6 @@ import java.math.BigDecimal
 
 class ProductRepo {
 
-    // context
-    // ArrayList "Orange", "Apple", "Lemon", "Pear"
     fun getProduct(): ProductModel {
         return ProductModel(
             productName = "Orange",
@@ -27,5 +25,11 @@ class ProductRepo {
             productPrice = BigDecimal.valueOf(19.99)
         )
     }
+
+    // getAllProducts()
+    // лист из 4 объектов ProductModel
+    // добавление в лист через apply
+    // переписать getProduct на возврат продуктов через id
+    // добавить в ProductModel id (int)
 
 }

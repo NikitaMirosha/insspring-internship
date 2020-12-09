@@ -8,10 +8,18 @@ import com.insspring.nikita_internship.repo.ProductRepo
 class ProductPresenter : BaseMvpPresenter<ProductView>() {
 
     private val repo = ProductRepo()
-    private val model = repo.getProduct()
+    private val productModel = repo.getProduct()
 
     init {
         viewState.updateImages()
-        viewState.updateProduct(model)
+        viewState.updateProduct(productModel)
+    }
+
+    fun onAddToBagClicked() {
+        viewState.openAddToBagActivity()
+    }
+
+    fun onBackButtonClicked() {
+        viewState.backToPrevScreen()
     }
 }

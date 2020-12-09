@@ -1,13 +1,15 @@
 package com.insspring.nikita_internship.ui.addtobag
 
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
+import com.delivery.ui.base.BaseMvpActivity
 import com.insspring.nikita_internship.R
 
-class AddToBagActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_add_to_bag)
+class AddToBagActivity : BaseMvpActivity() {
+
+    override fun getLayoutId(): Int = R.layout.activity_add_to_bag
+
+    override fun onCreateActivity(savedInstanceState: Bundle?) {
 
     }
+
 }

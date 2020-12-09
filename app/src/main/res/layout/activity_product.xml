@@ -36,7 +36,7 @@
                 android:orientation="horizontal">
 
                 <LinearLayout
-                    android:id="@+id/vLlUserProfile"
+                    android:id="@+id/vLlBackArrow"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/bg_white_rec_48_round_14"

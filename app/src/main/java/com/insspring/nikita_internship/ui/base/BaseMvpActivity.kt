@@ -43,9 +43,9 @@ abstract class BaseMvpActivity : MvpActivity(),
 //                View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
 //
 //        window.statusBarColor = Color.TRANSPARENT
+
         onPreCreate()
         setContentView(getLayoutId())
-
 
         onCreateActivity(savedInstanceState)
     }

@@ -48,7 +48,6 @@ abstract class BaseMvpDialogFragment : MvpDialogFragment(),
         (activity as? BaseMvpActivity)?.handleRestError(e)
     }
 
-
     override fun hideKeyboard() {
         (activity as? BaseMvpActivity)?.hideKeyboard()
     }

@@ -30,7 +30,6 @@ abstract class BaseMvpFragment : MvpFragment(),
         onViewCreated(view)
     }
 
-
     override fun showMessage(resId: Int) {
         (activity as? BaseMvpActivity)?.showMessage(resId)
     }
