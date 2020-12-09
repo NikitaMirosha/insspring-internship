@@ -3,29 +3,21 @@ package com.insspring.nikita_internship.ui.productsmenu
 import com.arellomobile.mvp.InjectViewState
 import com.delivery.ui.base.BaseMvpPresenter
 import com.insspring.nikita_internship.model.ProductModel
+import com.insspring.nikita_internship.repo.ProductRepo
 import io.reactivex.Observable
 
 @InjectViewState
 class ProductsMenuPresenter : BaseMvpPresenter<ProductsMenuView>() {
 
-    private var productsListModel: MutableList<ProductModel> = ArrayList()
-    // доставать из repo
-    private var productsNames = arrayOf("Orange", "Apple", "Lemon", "Pear")
+    private var productRepo: ProductRepo = ProductRepo()
+    private var productsListModel: MutableList<ProductModel> = productRepo.getAllProducts()
 
     fun onCreate(clickEvent: Observable<ProductModel>) {
 
-        // в отдельный метод
-        productsNames.forEach {
-            val productModel = ProductModel(productName = it)
-            productsListModel.add(productModel)
-        }
-
         initOnProductClickListener(clickEvent)
-
-        // каждый в отдельный метод
-        viewState.updateProducts(productsListModel)
-        viewState.updateImages()
-        viewState.updateProductListView()
+        updateProducts()
+        updateImages()
+        updateProductListView()
 
     }
 
@@ -33,6 +25,18 @@ class ProductsMenuPresenter : BaseMvpPresenter<ProductsMenuView>() {
         clickEvent.subscribe { product ->
             viewState.goToProductScreen(product)
         }
+    }
+
+    private fun updateProducts() {
+        viewState.updateProducts(productsListModel)
+    }
+
+    private fun updateImages() {
+        viewState.updateImages()
+    }
+
+    private fun updateProductListView() {
+        viewState.updateProductListView()
     }
 
     fun onTextChanged(text: String) {
