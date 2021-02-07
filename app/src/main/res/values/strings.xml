@@ -1,35 +1,16 @@
 <resources>
+    <!-- Active product activity   -->
     <string name="app_name">Fruit Shop</string>
-    <string name="about_orange">About Orange</string>
-    <string name="main_text">Oranges are tropical fruits that are actually some of the worlds
-    most popular. There are different types of oranges, ranging from sweet to bitter.
-    Each type belongs to the citrus family of fruits and grows on trees.
-        Oranges are tropical fruits that are actually some of the worlds
-    most popular. There are different types of oranges, ranging from sweet to bitter.
-    Each type belongs to the citrus family of fruits and grows on trees.
-        Oranges are tropical fruits that are actually some of the worlds
-    most popular. There are different types of oranges, ranging from sweet to bitter.
-    Each type belongs to the citrus family of fruits and grows on trees.
-        Oranges are tropical fruits that are actually some of the worlds
-    most popular. There are different types of oranges, ranging from sweet to bitter.
-    Each type belongs to the citrus family of fruits and grows on trees.
-        Oranges are tropical fruits that are actually some of the worlds
-    most popular. There are different types of oranges, ranging from sweet to bitter.
-    Each type belongs to the citrus family of fruits and grows on trees.
-        Oranges are tropical fruits that are actually some of the worlds
-    most popular. There are different types of oranges, ranging from sweet to bitter.
-    Each type belongs to the citrus family of fruits and grows on trees.
-        Oranges are tropical fruits that are actually some of the worlds
-    most popular. There are different types of oranges, ranging from sweet to bitter.
-    Each type belongs to the citrus family of fruits and grows on trees.
-    </string>
-
-    <string name="bs">Best Seller: Sweet Products Ltd.</string>
-
-    <string name="best_seller">Best Seller:</string>
-    <string name="sweet_products">Sweet Products Ltd.</string>
-    <string name="price">$10.55</string>
+    <string name="about_orange">About %s</string>
+    <string name="best_seller">Best Seller: %s</string>
+    <string name="price">$%s</string>
     <string name="per_kg">Per kg</string>
-    <string name="number">4.8</string>
+    <string name="rate_mark">%s</string>
     <string name="add_to_bag">Add To Bag</string>
+
+    <!-- Products list activity   -->
+    <string name="food">Food</string>
+    <string name="nav_menu_dot">•</string>
+    <string name="search">Search</string>
+    <string name="product_name">%s</string>
 </resources>

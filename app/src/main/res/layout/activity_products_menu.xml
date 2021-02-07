@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_16"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/dp_16">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/dp_24">
+
+            <ImageView
+                android:id="@+id/vIvUserProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                tools:src="@drawable/ic_user_profile" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/vIvDotsMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                tools:src="@drawable/ic_dots_menu" />
+
+        </LinearLayout>
+
+        <TextView
+            style="@style/TextView.ItemTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/food" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:layout_marginBottom="@dimen/dp_32"
+        android:background="@drawable/bg_white_rec_round_16">
+
+        <EditText
+            android:id="@+id/vEtSearchProduct"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:theme="@style/EditText"
+            android:textSize="@dimen/sp_22"
+            android:textColor="@color/black"/>
+
+    </LinearLayout>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/vRvProductsList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:itemCount="1"
+                tools:listitem="@layout/item_product"
+                android:overScrollMode="never" />
+
+        </ScrollView>
+
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/vBottomBar"
+            style="@style/Widget.MaterialComponents.BottomAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:theme="@style/AppThemeMaterial"
+            app:fabCradleMargin="@dimen/dp_16"
+            app:fabCradleRoundedCornerRadius="@dimen/dp_32"
+            app:fabCradleVerticalOffset="@dimen/dp_8">
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/vBottomNavigation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                app:menu="@menu/menu_bottom_nav" />
+
+        </com.google.android.material.bottomappbar.BottomAppBar>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/vFabAddToBag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorOrange"
+            android:src="@drawable/ic_bag"
+            app:borderWidth="0dp"
+            app:layout_anchor="@id/vBottomBar" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</LinearLayout>

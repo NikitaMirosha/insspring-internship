@@ -14,8 +14,12 @@
     <color name="colorAccent">#D81B60</color>
     <color name="colorWhite">#FFFFFF</color>
     <color name="colorGray">#6A6A6A</color>
+    <color name="colorLightGray">#F0F0F0</color>
     <color name="colorOrange">#FFC40B</color>
     <color name="colorToolbarText">#000000</color>
+    <color name="colorProductCard">#FFF6D9</color>
     <color name="colorDarkSemiTransparent">#CCFFFFFF</color>
+    <color name="startColor">#006797</color>
+    <color name="headerColor">#145795</color>
 
 </resources>
